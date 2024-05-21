@@ -1,5 +1,7 @@
 #!/bin/bash
 
+minikube start
+
 docker build -t web-app:latest web/
 docker build -t script:latest script/
 
