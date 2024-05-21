@@ -11,9 +11,9 @@ def get_statistics():
 
 @app.route('/time', methods=['GET'])
 def get_time():
-    global counter
-    counter += 1
-    return jsonify({'current_time': datetime.datetime.now().isoformat()})
+    response = requests.get('http://worldtimeapi.org/api/timezone/Europe/Moscow')
+    data = response.json()
+    return jsonify({'datetime': data['datetime']})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

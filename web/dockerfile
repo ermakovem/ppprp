@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-RUN pip install Flask==2.0.2 Werkzeug==2.0.3
+RUN pip install Flask==2.0.2 Werkzeug==2.0.3 requests==2.26.0
 
 COPY app.py app.py
 
