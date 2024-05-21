@@ -1,0 +1,7 @@
+FROM python:3.9-slim
+
+RUN pip install requests==2.26.0
+
+COPY script.py script.py
+
+CMD ["python", "stats_script.py"]
