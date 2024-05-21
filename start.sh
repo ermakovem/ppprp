@@ -3,8 +3,8 @@
 docker build -t web-app:latest web/
 docker build -t script:latest script/
 
-kubectl apply -f web-app.yaml
-kubectl apply -f script.yaml
+kubectl apply -f kubernetes/web-app.yaml
+kubectl apply -f kubernetes/script.yaml
 
 kubectl get pods
 
