@@ -1,7 +1,7 @@
 import requests
 import time
 
-url = 'http://web-app:80/statistics'
+url = 'http://web-app-service:80/statistics'
 
 time.sleep(30)
 

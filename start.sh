@@ -9,3 +9,5 @@ docker build -t egr0k/script:latest -f script/dockerfile script/
 docker push egr0k/script:latest
 kubectl apply -f kubernetes/script.yaml
 
+kubectl apply -f kubernetes/service.yaml
+

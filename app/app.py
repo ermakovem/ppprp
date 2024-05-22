@@ -17,4 +17,4 @@ def get_statistics():
     return jsonify({'count': counter})
 
 if __name__ == 'main':
-    app.run()
+    app.run(debug=True)
