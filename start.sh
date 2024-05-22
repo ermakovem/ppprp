@@ -1,12 +1,11 @@
 #!/bin/bash
 
-docker build -t web-app:latest web/
-docker build -t script:latest script/
-
+docker build -t egr0k/web-app:latest -f app/Dockerfile app/
+docker push egr0k/web-app:latest
 kubectl apply -f kubernetes/web-app.yaml
+
+
+docker build -t egr0k/script:latest -f script/dockerfile script/
+docker push egr0k/script:latest
 kubectl apply -f kubernetes/script.yaml
 
-kubectl get pods
-
-minikube service web-app-service --url
-echo "done"

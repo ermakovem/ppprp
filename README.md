@@ -1,2 +1,2 @@
-deps: docker, minikube
-1. run start.sh :)
+start minikube
+run start.sh
