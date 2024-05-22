@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t egr0k/web-app:latest -f app/Dockerfile app/
+docker build -t egr0k/web-app:latest -f app/dockerfile app/
 docker push egr0k/web-app:latest
 kubectl apply -f kubernetes/web-app.yaml
 
